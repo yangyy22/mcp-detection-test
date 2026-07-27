@@ -1,0 +1,51 @@
+{
+  "mcpServers": {
+    "filesystem": {
+      "command": "npx",
+      "args": ["-y", "@modelcontextprotocol/server-filesystem", "/path/to/allowed/dir"]
+    },
+    "github": {
+      "command": "npx",
+      "args": ["-y", "@modelcontextprotocol/server-github"],
+      "env": { "GITHUB_PERSONAL_ACCESS_TOKEN": "REPLACE_ME" }
+    },
+    "slack": {
+      "command": "npx",
+      "args": ["-y", "@modelcontextprotocol/server-slack"],
+      "env": { "SLACK_BOT_TOKEN": "REPLACE_ME" }
+    },
+    "postgres": {
+      "command": "npx",
+      "args": ["-y", "@modelcontextprotocol/server-postgres", "postgresql://localhost/db"]
+    },
+    "snyk": {
+      "command": "npx",
+      "args": ["-y", "snyk@latest", "mcp", "-t", "stdio"]
+    },
+    "TalkToFigma": {
+      "command": "bunx",
+      "args": ["cursor-talk-to-figma-mcp@latest"]
+    },
+    "unity": {
+      "_note": "UNVERIFIED PLACEHOLDER - Unity MCP installs via Unity Package Manager (git URL) + Python/uv, not a plain npx command. Confirm actual invocation from Unity's 'Configure All Detected Clients' output before running.",
+      "command": "uv",
+      "args": ["run", "mcp_source.py"]
+    },
+    "mcp-snyk-sammcj": {
+      "command": "npx",
+      "args": ["-y", "github:sammcj/mcp-snyk"],
+      "env": { "SNYK_API_KEY": "REPLACE_ME" },
+      "_note": "If npx tries SSH and fails with publickey error, replace the github: arg with https://github.com/sammcj/mcp-snyk"
+    },
+    "mcp-snyk-punkpeye": {
+      "command": "npx",
+      "args": ["-y", "github:punkpeye/mcp-snyk"],
+      "env": { "SNYK_API_KEY": "REPLACE_ME" },
+      "_note": "If npx tries SSH and fails with publickey error, replace the github: arg with https://github.com/punkpeye/mcp-snyk"
+    },
+    "agent-scan-demoserver": {
+      "command": "npx",
+      "args": ["-y", "github:snyk/agent-scan#demoserver"]
+    }
+  }
+}

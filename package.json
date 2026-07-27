@@ -1,0 +1,14 @@
+{
+  "name": "mcp-snyk-detection-test",
+  "version": "1.0.0",
+  "description": "Test repo for measuring how many installed MCP servers Snyk (SCA/Evo) can detect at the source-code dependency level",
+  "private": true,
+  "dependencies": {
+    "@modelcontextprotocol/server-filesystem": "*",
+    "@modelcontextprotocol/server-github": "*",
+    "@modelcontextprotocol/server-slack": "*",
+    "@modelcontextprotocol/server-postgres": "*",
+    "snyk": "*",
+    "cursor-talk-to-figma-mcp": "*"
+  }
+}
