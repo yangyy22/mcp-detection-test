@@ -8,7 +8,7 @@
     "@modelcontextprotocol/server-github": "*",
     "@modelcontextprotocol/server-slack": "*",
     "@modelcontextprotocol/server-postgres": "*",
-    "snyk": "*",
+    "snyk": "1.1306.2",
     "cursor-talk-to-figma-mcp": "*"
   }
 }
